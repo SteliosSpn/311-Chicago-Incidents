@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{fragments/main_layout}">
+<head>
+<title>Result</title>
+</head>
+<body>
+
+	<div layout:fragment="content" class="container mySpace">
+	     <form action="/procedure1Result" class="form-inline">
+	     </form>
+		<div class="card">
+			<div class="card card-body">
+				<table class="table table-hover">
+					<thead>
+						<tr>
+							<th>Total</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr th:each="procedure:${procedure2}">
+							<td th:text="${procedure}"></td>
+						</tr>
+					</tbody>
+
+				</table>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

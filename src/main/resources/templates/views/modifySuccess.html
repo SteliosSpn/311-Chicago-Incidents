@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+  layout:decorate="~{fragments/main_layout}" >
+<head>
+ <title>Success</title>
+</head>
+<body>
+
+     <div  layout:fragment="content" class="container mySpace">
+          <div class="alert alert-success">
+            Modification successful!! Your report number is:
+            <p th:text="${session.report_id}" th:unless="${session == null}"> . </p>
+            If you need to modify a field you should remember report number!!       
+          </div>
+     </div>
+</body>
+</html>

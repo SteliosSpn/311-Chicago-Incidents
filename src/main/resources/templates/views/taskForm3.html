@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{fragments/main_layout}">
+<head>
+<title>Task Form</title>
+</head>
+<body>
+
+	<div layout:fragment="content" class="container mySpace">
+	<div class="alert alert-info" th:if="${empty}">
+	<p class="text text-center">
+	  Some fields are empty
+	</p>
+	</div>
+		<form th:action="@{/addTask3}" method="post">
+
+			<div class="form-group">
+				<label for="Date" class="form-control-label">Date</label> <input
+					type="date" class="form-control" name="mydate" id="mydate" />
+			</div>
+			
+				<input type="submit" value="Submit" class="btn btn-primary" />
+		</form>
+	</div>
+</body>
+</html>

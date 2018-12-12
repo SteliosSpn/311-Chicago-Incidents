@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{fragments/main_layout}">
+<head>
+<title>Complaint Form</title>
+</head>
+<body>
+
+	<div layout:fragment="content" class="container mySpace">
+	
+		<form th:action="@{/addComplaint3}" method="post">
+			
+			<div class="form-group">
+				<label for="surface" class="form-control-label">surface</label> <input
+					type="text" class="form-control" th:field="*{graffiti_removal.surface}" id="surface" />
+				<div class="text text-danger" th:if="${#fields.hasErrors('graffiti_removal.surface')}"
+					th:errors="*{graffiti_removal.surface}"></div>
+			</div>
+			
+			<div class="form-group">
+				<label for="graffiti_location" class="form-control-label">graffiti_location</label> <input
+					type="text" class="form-control" th:field="*{graffiti_removal.graffiti_location}" id="graffiti_location" />
+				<div class="text text-danger" th:if="${#fields.hasErrors('graffiti_removal.graffiti_location')}"
+					th:errors="*{graffiti_removal.graffiti_location}"></div>
+			</div>
+			
+			<div class="form-group">
+				<label for="ssa" class="form-control-label">ssa</label> <input
+					type="number" class="form-control" th:field="*{graffiti_removal.ssa}" id="ssa" />
+				<div class="text text-danger" th:if="${#fields.hasErrors('graffiti_removal.ssa')}"
+					th:errors="*{graffiti_removal.ssa}"></div>
+			</div>
+			
+			<div class="form-group">
+				<input
+					type="hidden" class="form-control" th:field="*{all_reports.creation_date}" id="creation_date" />
+				<div class="text text-danger" th:if="${#fields.hasErrors('all_reports.creation_date')}"
+					th:errors="*{all_reports.creation_date}"></div>
+			</div>
+			
+			<div class="form-group">
+				<label for="status" class="form-control-label">Status</label> <input
+					type="text" class="form-control" th:field="*{all_reports.status}" id="status" />
+				<div class="text text-danger" th:if="${#fields.hasErrors('all_reports.status')}"
+					th:errors="*{all_reports.status}"></div>
+			</div>
+			
+			<div class="form-group">
+				<input
+					type="hidden" class="form-control" th:field="*{all_reports.service_request_number}" id="service_request_number" />
+				<div class="text text-danger" th:if="${#fields.hasErrors('all_reports.service_request_number')}"
+					th:errors="*{all_reports.service_request_number}"></div>
+			</div>
+			
+			<div class="form-group">
+				<input
+					type="hidden" class="form-control" th:field="*{all_reports.type_of_service_request}" id="type_of_service_request" />
+				<div class="text text-danger" th:if="${#fields.hasErrors('all_reports.type_of_service_request')}"
+					th:errors="*{all_reports.type_of_service_request}"></div>
+			</div>
+			
+			<div class="form-group">
+				<label for="street_address" class="form-control-label">street_address</label> <input
+					type="text" class="form-control" th:field="*{all_reports.street_address}" id="street_address" />
+				<div class="text text-danger" th:if="${#fields.hasErrors('all_reports.street_address')}"
+					th:errors="*{all_reports.street_address}"></div>
+			</div>
+			
+			<div class="form-group">
+				<label for="zip_code" class="form-control-label">zip_code</label> <input
+					type="number" class="form-control" min="10000" max="999999" th:field="*{all_reports.zip_code}" id="zip_code" />
+				<div class="text text-danger" th:if="${#fields.hasErrors('all_reports.zip_code')}"
+					th:errors="*{all_reports.zip_code}"></div>
+			</div>
+			
+			<div class="form-group">
+				<label for="x_coord" class="form-control-label">x_coord</label> <input
+					type="number" step=".00000001" class="form-control" th:field="*{all_reports.x_coord}" id="x_coord" />
+				<div class="text text-danger" th:if="${#fields.hasErrors('all_reports.x_coord')}"
+					th:errors="*{all_reports.x_coord}"></div>
+			</div>
+			
+			<div class="form-group">
+				<label for="y_coord" class="form-control-label">y_coord</label> <input
+					type="number" step=".00000001" class="form-control" th:field="*{all_reports.y_coord}" id="y_coord" />
+				<div class="text text-danger" th:if="${#fields.hasErrors('all_reports.y_coord')}"
+					th:errors="*{all_reports.y_coord}"></div>
+			</div>
+			
+			<div class="form-group">
+				<label for="ward" class="form-control-label">ward</label> <input
+					type="number" class="form-control" th:field="*{all_reports.ward}" id="ward"/>
+				<div class="text text-danger" th:if="${#fields.hasErrors('all_reports.ward')}"
+					th:errors="*{all_reports.ward}"></div>
+			</div>
+			
+			<div class="form-group">
+				<label for="police_district" class="form-control-label">police_district</label> <input
+					type="number" class="form-control" th:field="*{all_reports.police_district}" id="police_district" />
+				<div class="text text-danger" th:if="${#fields.hasErrors('all_reports.police_district')}"
+					th:errors="*{all_reports.police_district}"></div>
+			</div>
+			
+			<div class="form-group">
+				<label for="community_area" class="form-control-label">community_area</label> <input
+					type="number" class="form-control" th:field="*{all_reports.community_area}" id="community_area" />
+				<div class="text text-danger" th:if="${#fields.hasErrors('all_reports.community_area')}"
+					th:errors="*{all_reports.community_area}"></div>
+			</div>
+			
+			<div class="form-group">
+				<label for="latitude" class="form-control-label">latitude</label> <input
+					type="number" step=".0000000000001" class="form-control" th:field="*{all_reports.latitude}" id="latitude" />
+				<div class="text text-danger" th:if="${#fields.hasErrors('all_reports.latitude')}"
+					th:errors="*{all_reports.latitude}"></div>
+			</div>
+			
+			<div class="form-group">
+				<label for="longitude" class="form-control-label">longitude</label> <input
+					type="number" step=".0000000000001" class="form-control" th:field="*{all_reports.longitude}" id="longitude" />
+				<div class="text text-danger" th:if="${#fields.hasErrors('all_reports.longitude')}"
+					th:errors="*{all_reports.longitude}"></div>
+			</div>
+			
+			<input type="submit" value="Submit" class="btn btn-primary" />
+
+		</form>
+	</div>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{fragments/main_layout}">
+<head>
+<title>Complaint Form</title>
+</head>
+<body>
+
+	<div layout:fragment="content" class="container mySpace">
+	
+		<form th:action="@{/addComplaint4}" method="post">
+			
+			<div class="form-group">
+				<label for="potholes_filled" class="form-control-label">potholes_filled</label> <input
+					type="number" class="form-control" th:field="*{pot_holes_reported.potholes_filled}" id="potholes_filled" />
+				<div class="text text-danger" th:if="${#fields.hasErrors('pot_holes_reported.potholes_filled')}"
+					th:errors="*{pot_holes_reported.potholes_filled}"></div>
+			</div>
+			
+			<div class="form-group">
+				<label for="current_activity" class="form-control-label">current_activity</label> <input
+					type="text" class="form-control" th:field="*{pot_holes_reported.current_activity}" id="current_activity" />
+				<div class="text text-danger" th:if="${#fields.hasErrors('pot_holes_reported.current_activity')}"
+					th:errors="*{pot_holes_reported.current_activity}"></div>
+			</div>
+			
+			<div class="form-group">
+				<label for="most_recent_action" class="form-control-label">most_recent_action</label> <input
+					type="text" class="form-control" th:field="*{pot_holes_reported.most_recent_action}" id="most_recent_action" />
+				<div class="text text-danger" th:if="${#fields.hasErrors('pot_holes_reported.most_recent_action')}"
+					th:errors="*{pot_holes_reported.most_recent_action}"></div>
+			</div>
+			
+			<div class="form-group">
+				<label for="ssa" class="form-control-label">ssa</label> <input
+					type="number" class="form-control" th:field="*{pot_holes_reported.ssa}" id="ssa" />
+				<div class="text text-danger" th:if="${#fields.hasErrors('pot_holes_reported.ssa')}"
+					th:errors="*{pot_holes_reported.ssa}"></div>
+			</div>
+			
+			<div class="form-group">
+				<label for="street_address" class="form-control-label">street_address</label> <input
+					type="text" class="form-control" th:field="*{all_reports.street_address}" id="street_address" />
+				<div class="text text-danger" th:if="${#fields.hasErrors('all_reports.street_address')}"
+					th:errors="*{all_reports.street_address}"></div>
+			</div>
+			
+			<div class="form-group">
+				<label for="zip_code" class="form-control-label">zip_code</label> <input
+					type="number" class="form-control" min="10000" max="999999" th:field="*{all_reports.zip_code}" id="zip_code" />
+				<div class="text text-danger" th:if="${#fields.hasErrors('all_reports.zip_code')}"
+					th:errors="*{all_reports.zip_code}"></div>
+			</div>
+			
+			<div class="form-group">
+				<label for="x_coord" class="form-control-label">x_coord</label> <input
+					type="number" step=".00000001" class="form-control" th:field="*{all_reports.x_coord}" id="x_coord" />
+				<div class="text text-danger" th:if="${#fields.hasErrors('all_reports.x_coord')}"
+					th:errors="*{all_reports.x_coord}"></div>
+			</div>
+			
+			<div class="form-group">
+				<label for="y_coord" class="form-control-label">y_coord</label> <input
+					type="number" step=".00000001" class="form-control" th:field="*{all_reports.y_coord}" id="y_coord" />
+				<div class="text text-danger" th:if="${#fields.hasErrors('all_reports.y_coord')}"
+					th:errors="*{all_reports.y_coord}"></div>
+			</div>
+			
+			<div class="form-group">
+				<label for="ward" class="form-control-label">ward</label> <input
+					type="number" class="form-control" th:field="*{all_reports.ward}" id="ward"/>
+				<div class="text text-danger" th:if="${#fields.hasErrors('all_reports.ward')}"
+					th:errors="*{all_reports.ward}"></div>
+			</div>
+			
+			<div class="form-group">
+				<label for="police_district" class="form-control-label">police_district</label> <input
+					type="number" class="form-control" th:field="*{all_reports.police_district}" id="police_district" />
+				<div class="text text-danger" th:if="${#fields.hasErrors('all_reports.police_district')}"
+					th:errors="*{all_reports.police_district}"></div>
+			</div>
+			
+			<div class="form-group">
+				<label for="community_area" class="form-control-label">community_area</label> <input
+					type="number" class="form-control" th:field="*{all_reports.community_area}" id="community_area" />
+				<div class="text text-danger" th:if="${#fields.hasErrors('all_reports.community_area')}"
+					th:errors="*{all_reports.community_area}"></div>
+			</div>
+			
+			<div class="form-group">
+				<label for="latitude" class="form-control-label">latitude</label> <input
+					type="number" step=".0000000000001" class="form-control" th:field="*{all_reports.latitude}" id="latitude" />
+				<div class="text text-danger" th:if="${#fields.hasErrors('all_reports.latitude')}"
+					th:errors="*{all_reports.latitude}"></div>
+			</div>
+			
+			<div class="form-group">
+				<label for="longitude" class="form-control-label">longitude</label> <input
+					type="number" step=".0000000000001" class="form-control" th:field="*{all_reports.longitude}" id="longitude" />
+				<div class="text text-danger" th:if="${#fields.hasErrors('all_reports.longitude')}"
+					th:errors="*{all_reports.longitude}"></div>
+			</div>
+			
+			<input type="submit" value="Submit" class="btn btn-primary" />
+
+		</form>
+	</div>
+</body>
+</html>

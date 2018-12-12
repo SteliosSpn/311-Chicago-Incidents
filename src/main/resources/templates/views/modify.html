@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{fragments/main_layout}">
+<head>
+<title>Modify Incident</title>
+</head>
+<body>
+
+	<div layout:fragment="content" class="container mySpace">
+	<div class="alert alert-info" th:if="${not_exist}">
+	<p class="text text-center">
+	  This Report Number does not exist!
+	</p>
+	</div>
+		<form th:action="@{/modify}" th:object="${all_reports}" method="post">
+
+			<div class="form-group">
+				<label for="report_id" class="form-control-label">Report Number</label> <input
+					type="number" class="form-control" th:field="*{report_id}" id="report_id" />
+				<div class="text text-danger" th:if="${#fields.hasErrors('report_id')}"
+					th:errors="*{report_id}"></div>
+
+			</div>
+			<input type="submit" value="Submit" class="btn btn-primary" />
+
+		</form>
+	</div>
+</body>
+</html>

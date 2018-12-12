@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{fragments/main_layout}">
+<head>
+<title>Search</title>
+</head>
+<body>
+
+	<div layout:fragment="content" class="container mySpace">
+		<div class="card">
+			<div class="card card-body">
+				<table class="table table-hover">
+					<thead>
+						<tr>
+							<th>Search Method</th>
+							<th>Search Button</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Street Address</td>
+							<td><a href="/searchByStreet" class="btn btn-dark">Search</a></td>
+						</tr>
+						<tr>
+							<td>Zip Code</td>
+							<td><a href="/searchByZip" class="btn btn-dark">Search</a></td>
+						</tr>
+					</tbody>
+
+				</table>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

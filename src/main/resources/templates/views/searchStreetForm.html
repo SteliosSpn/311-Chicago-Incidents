@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{fragments/main_layout}">
+<head>
+<title>Search</title>
+</head>
+<body>
+
+	<div layout:fragment="content" class="container mySpace">
+		<form th:action="@{/searchByStreet}" th:object="${all_reports}" method="post">
+		
+			<div class="form-group">
+				<label for="street_address" class="form-control-label">Street Address</label> <input
+					type="text" class="form-control" th:field="*{street_address}" id="street_address" />
+				<div class="text text-danger" th:if="${#fields.hasErrors('street_address')}"
+					th:errors="*{street_address}"></div>
+			</div>
+			
+			<div class="form-group mb-2">
+	         <input type="number" class="form-control" name="limit" min="1" max="50" placeholder="Optional: limit of results" />
+	         </div>
+			
+			<input type="submit" value="Submit" class="btn btn-primary" />
+
+		</form>
+	</div>
+</body>
+</html>

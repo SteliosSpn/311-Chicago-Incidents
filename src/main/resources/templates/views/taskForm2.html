@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{fragments/main_layout}">
+<head>
+<title>Task Form</title>
+</head>
+<body>
+
+	<div layout:fragment="content" class="container mySpace">
+	<div class="alert alert-info" th:if="${empty}">
+	<p class="text text-center">
+	  Some fields are empty
+	</p>
+	</div>
+		<form th:action="@{/addTask2}" method="post">
+
+			<div class="form-group">
+				<label for="Date" class="form-control-label">Start Date</label> <input
+					type="date" class="form-control" name="min_date" id="min_date" />
+			</div>
+			
+			<div class="form-group">
+				<label for="Date" class="form-control-label">End Date</label> <input
+					type="date" class="form-control" name="max_date" id="max_date" />
+			</div>
+				
+				<div class="form-group">
+				<label for="requestType" class="form-control-label">Request Type</label>
+				<select class="form-control" name="type"
+					id="requestType">
+				  <option value="Abandoned Vehicle">Abandoned Vehicle</option>
+				  <option value="Pothole in Street">Pothole in Street</option>
+				  <option value="Tree Debris">Tree Debris</option>
+				  <option value="Graffiti Removal">Graffiti Removal</option>
+				  <option value="Garbage Cart Black Maintenance/Replacement">Garbage Cart Black Maintenance/Replacement</option>
+				  <option value="Tree Trim">Tree Trim</option>
+				  <option value="Rodent Baiting/Rat Complaint">Rodent Baiting/Rat Complaint</option>
+				  <option value="Sanitation Code Violation">Sanitation Code Violation</option>
+				  <option value="Street Lights - All/Out">Street Lights - All/Out</option>
+				  <option value="Street Light Out"">Street Light Out"</option>
+				  <option value="Alley Light Out">Alley Light Out</option>
+				  <option value="Street Light - 1/Out">Street Light - 1/Out</option>
+				</select>
+               </div>
+				<input type="submit" value="Submit" class="btn btn-primary" />
+		</form>
+	</div>
+</body>
+</html>
