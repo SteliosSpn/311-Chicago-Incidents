@@ -6,8 +6,6 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import org.hibernate.validator.constraints.NotEmpty;
-
 @Entity
 @Table(name = "abandoned_vehicles")
 public class AbandonedVehicles implements Serializable{

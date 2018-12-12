@@ -1,8 +1,5 @@
 package com.chicago.controllers;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
@@ -18,7 +15,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.chicago.models.AllReports;
 import com.chicago.models.Log;
 import com.chicago.repositories.AllReportsRepositoryImpl;
-import com.chicago.services.AllReportsService;
 import com.chicago.services.UserService;
 
 @Controller

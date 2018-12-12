@@ -1,13 +1,10 @@
 package com.chicago.repositories;
 
 
-import java.util.List;
-
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
 import com.chicago.models.AllReports;
-import com.chicago.models.user.managment.User;
 
 public interface AllReportsRepository extends JpaRepository<AllReports, Integer>, AllReportsRepositoryCustom{
 	@Query("select max(report_id) from AllReports")

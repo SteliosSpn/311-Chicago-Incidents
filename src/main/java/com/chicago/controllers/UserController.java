@@ -14,7 +14,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.chicago.models.AllReports;
-import com.chicago.repositories.AllReportsRepositoryImpl;
 import com.chicago.services.AllReportsService;
 import com.chicago.services.UserService;
 

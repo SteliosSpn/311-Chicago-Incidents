@@ -5,7 +5,6 @@ import java.util.List;
 
 import com.chicago.models.AllReports;
 import com.chicago.models.Procedure;
-
 public interface AllReportsRepositoryCustom {
 
 	List<AllReports> getZipCode(int zip_code, int limit);

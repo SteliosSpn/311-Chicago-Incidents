@@ -1,6 +1,5 @@
 package com.chicago.security;
 
-import javax.servlet.http.HttpSession;
 import javax.sql.DataSource;
 
 import org.springframework.beans.factory.annotation.Autowired;

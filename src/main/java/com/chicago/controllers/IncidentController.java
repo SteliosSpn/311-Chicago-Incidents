@@ -1,7 +1,5 @@
 package com.chicago.controllers;
 
-import java.sql.Timestamp;
-
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 

@@ -19,7 +19,6 @@ import com.chicago.repositories.AbandonedVehicleRepository;
 import com.chicago.repositories.AllReportsRepository;
 import com.chicago.repositories.GarbageCartRepository;
 import com.chicago.repositories.GraffitiRemovalRepository;
-import com.chicago.repositories.LogRepository;
 import com.chicago.repositories.PotHolesRepository;
 import com.chicago.repositories.RodentBaitingRepository;
 import com.chicago.repositories.SanitationCodeRepository;
